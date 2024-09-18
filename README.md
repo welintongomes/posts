@@ -4,7 +4,7 @@ para conpartilhar
 
     https://welintongomes.github.io/post/
 
-link: https://welintongomes.github.io/post/
+link: https://welintongomes.github.io/posts/
 
 * funções
 * botões
