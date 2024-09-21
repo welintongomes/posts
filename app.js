@@ -9,19 +9,29 @@ Enunciado:
 
     NOTA: quando uma área é apresentada, as outras devem ficar escondidas
 ---------------------------------------------------------------------------- */
-
-function hide_all(){
-    document.querySelectorAll('[id^="info"]').forEach((elemento)=>{elemento.classList.add("d-none")});
-}
-function show_tab(id){
-    document.querySelector("#info" + id).classList.remove("d-none");
-}
+/*fazendo o mesmo exercício abaixo, porém reduzindo e deixando o código mais compacto*/
+document.querySelectorAll('[id^="info"]').forEach((e)=>{e.classList.add("d-none")});
+document.querySelector('#info1').classList.remove("d-none");
 document.querySelectorAll('[id^="tab"]').forEach((btn)=>{
-    btn.addEventListener('click',(btn) => {
-        hide_all();
-        show_tab(btn.target.id.substring(3))
+    btn.addEventListener('click',(btn)=>{
+        document.querySelectorAll('[id^="info"]').forEach((e)=>{e.classList.add("d-none")});
+        document.querySelector("#info" + btn.target.id.substring(3)).classList.remove("d-none");
     })
 })
 
-hide_all()
-show_tab(1)
+
+// function hide_all(){
+//     document.querySelectorAll('[id^="info"]').forEach((elemento)=>{elemento.classList.add("d-none")});
+// }
+// function show_tab(id){
+//     document.querySelector("#info" + id).classList.remove("d-none");
+// }
+// document.querySelectorAll('[id^="tab"]').forEach((btn)=>{
+//     btn.addEventListener('click',(btn) => {
+//         hide_all();
+//         show_tab(btn.target.id.substring(3))
+//     })
+// })
+
+// hide_all()
+// show_tab(1)
